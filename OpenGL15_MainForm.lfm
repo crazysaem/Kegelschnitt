@@ -1,0 +1,148 @@
+object GLForm: TGLForm
+  Left = 301
+  Height = 522
+  Top = 156
+  Width = 902
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Kegelschnitt'
+  ClientHeight = 502
+  ClientWidth = 902
+  Color = clMoneyGreen
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 713
+    Height = 25
+    Top = 418
+    Width = 163
+    Caption = 'y² = 2*p*x - (1-e²)*x²'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 713
+    Height = 21
+    Top = 448
+    Width = 36
+    Caption = 'p = ?'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 712
+    Height = 21
+    Top = 472
+    Width = 36
+    Caption = 'e = ?'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Popengl: TPanel
+    Left = 96
+    Height = 400
+    Top = 8
+    Width = 800
+    Color = clRed
+    ParentColor = False
+    TabOrder = 0
+  end
+  object TBwaagr: TTrackBar
+    Left = 96
+    Height = 29
+    Top = 424
+    Width = 600
+    Max = 100
+    Position = 50
+    TabOrder = 1
+  end
+  object TBsenkr: TTrackBar
+    Left = 56
+    Height = 408
+    Top = 8
+    Width = 31
+    Max = 100
+    Orientation = trVertical
+    Position = 6
+    TabOrder = 2
+  end
+  object TBEbeneY: TTrackBar
+    Left = 16
+    Height = 408
+    Top = 8
+    Width = 31
+    Max = 100
+    Orientation = trVertical
+    Position = 0
+    TabOrder = 3
+  end
+  object TBEbenedreh: TTrackBar
+    Left = 96
+    Height = 29
+    Hint = '0'
+    Top = 456
+    Width = 600
+    Max = 100
+    OnChange = TBEbenedrehChange
+    Position = 50
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 424
+    Width = 71
+    Caption = 'Abschneiden'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -8
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object MainMenu1: TMainMenu
+    left = 40
+    top = 456
+    object MenuItem1: TMenuItem
+      Caption = 'Datei'
+      object MenuItem2: TMenuItem
+        Caption = 'Beenden'
+        OnClick = MenuItem2Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Über'
+      object MenuItem4: TMenuItem
+        Caption = 'Über'
+        OnClick = MenuItem4Click
+      end
+    end
+  end
+end
